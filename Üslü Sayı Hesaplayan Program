@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner ss= new Scanner(System.in);
+        int n, k,gg=1;
+        System.out.print("esas sayiyi giriniz");
+        n= ss.nextInt();
+        System.out.print("us sayiyi giriniz");
+        k= ss.nextInt();
+        for (int i=1;i<=k;i++){
+            gg *=n;
+        }
+        System.out.println(gg);
+    }
+}
