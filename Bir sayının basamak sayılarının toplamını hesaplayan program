@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner ss = new Scanner(System.in);
+        int num , basay=0;
+        System.out.print("sayi giriniz :");
+        num = ss.nextInt();
+        int bk =num;
+        int total = 0;
+        int tt;
+        int deto =0;
+
+        while (bk!=0){
+            tt= bk %10;
+            deto+=tt;
+            bk/=10;
+
+        }
+        System.out.println(deto);
+    }
+}
