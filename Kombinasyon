@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner ss= new Scanner(System.in);
+        //n!=Faktöriyel
+        int k ,  j ;
+        double n = 1 ,r=1 ;
+        System.out.print("toplam eleman sayisini giriniz :");
+        k= ss.nextInt();
+        for (int i=1; i<=k; i++){
+            n=n*i;
+        }
+        // r!
+        System.out.print("secilan eleman sayisini giriniz :");
+        j= ss.nextInt();
+        for (int i=1; i<=j; i++){
+            r=r*i;
+        }
+        // (n-r)!
+        int  y=1;
+        int d=k-j;
+        for (int i=1; i<=d; i++){
+            y=y*i;
+        }
+        double nCR=n/(r*y);
+        System.out.println("Kombinasyon :"+nCR);
+    }
+}
