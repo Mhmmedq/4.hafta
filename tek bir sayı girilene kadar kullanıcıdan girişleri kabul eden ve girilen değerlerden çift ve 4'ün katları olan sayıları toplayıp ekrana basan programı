@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner ss= new Scanner(System.in);
+        int k ;
+        int total=0;
+        do {
+            System.out.print("sayi giriniz");
+            k = ss.nextInt();
+            if (k%4==0){
+                total+=k;
+            }
+        }while (k%2==0);
+        System.out.println("girilen değerlerden çift ve 4'ün katları olan sayıları toplami : "+total);
+    }
+}
