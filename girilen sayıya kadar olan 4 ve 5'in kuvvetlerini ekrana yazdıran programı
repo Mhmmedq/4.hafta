@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner ss= new Scanner(System.in);
+        int k;
+        System.out.print("sayinizi giriniz");
+        k= ss.nextInt();
+        for (int i=4; i<k; i*=4){
+            System.out.print(i+" , ");
+        }
+        for (int i=5; i<k; i*=5){
+            System.out.print(i+" , ");
+        }
+    }
+}
