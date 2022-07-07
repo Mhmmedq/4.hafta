@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class fgf {
+    public static void main(String[] args) {
+        Scanner scr = new Scanner(System.in);
+        String usern, passw;
+        int right = 3;
+        int balance = 2000;
+        int selc;
+        int prk;
+        while (right > 0) {
+            System.out.print("kullancı adi giriniz");
+            usern = scr.nextLine();
+            System.out.print("sifrenizi giriniz");
+            passw = scr.nextLine();
+
+            if (usern.equals("qwe") && passw.equals("123")) {
+                System.out.println("BANKAMIZA HOŞ GELDİNİZ");
+                do {
+                    System.out.println("1-para cekme \n2-para yatirma \n3-bakiye sorgulama\n4-ÇIKIŞ yap");
+                    selc = scr.nextInt();
+                    switch (selc) {
+                        case 1:
+                            System.out.println("para miktar");
+                            prk = scr.nextInt();
+                            if (prk <= balance) {
+                                balance -= prk;
+                            } else {
+                                System.out.println("bakiye yetersizdir");
+                            }
+                            break;
+                        case 2:
+                            System.out.println("para miktar");
+                            prk = scr.nextInt();
+                            balance += prk;
+                            break;
+                        case 3:
+                            System.out.println(balance);
+                    }
+                } while (selc != 4);
+                System.out.println("GÖRÜŞMEK ÜZERE");
+                break;
+
+            } else {
+                System.out.println("HATALI GİRİŞ YAPTINIZ. TEKRAR DENEYİNİZ");
+                right--;
+                System.out.println("kalan HAKINIZ " + right);
+            }
+            if (right == 0) {
+                System.out.println("hesap blokelenmistir");
+            }
+        }
+
+    }
+}
