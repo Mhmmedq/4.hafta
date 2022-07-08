@@ -11,14 +11,14 @@ public class fgf {
            if (i<2){
                bn=l ;
                kn =l;
-           } else {
-               if (l > bn) {
+           } else if (l > bn) {
                    bn=l;
-               } else if (l < kn) {
+               }
+           else if (l < kn) {
                    kn=l;
                }
-           }
        }
+       
         System.out.println("en kucuk sayi : "+kn);
         System.out.println("en buyuk sayi : "+bn);
 
