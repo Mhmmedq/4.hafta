@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class giris {
+    public static void main(String[] args) {
+        Scanner scr =new Scanner(System.in);
+        System.out.print("sayiyi giriiniz: ");
+        int n=scr.nextInt();
+        int top=0;
+        for (int i=1; i<n ;i++){
+            if(n%i==0){
+                top+=i;
+            }
+        }
+        if (top==n) {
+            System.out.println(n+" Mükemmel sayıdır");
+        }else System.out.println(n+" Mükemmel sayı degildır");
+
+    }
+}
