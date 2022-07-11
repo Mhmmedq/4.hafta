@@ -1,0 +1,16 @@
+public class giris {
+    public static void main(String[] args) {
+
+        for (int i=2;i<100;i++){
+            int top=0;
+            for (int h=1; h<=i ; h++){
+                if ((i % h) == 0) {
+                    top++;
+                }
+            }
+            if (top==2) {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
