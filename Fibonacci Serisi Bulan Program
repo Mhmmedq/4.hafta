@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class giris {
+    public static void main(String[] args) {
+        Scanner scr= new Scanner(System.in);
+        int n;
+        System.out.println("sayi");
+        n= scr.nextInt();
+        int birnu=0, ikinu=1,fibu;
+        for (int i=1;i<n;i++){
+            fibu=birnu+ikinu;
+            System.out.println(birnu+" + "+ikinu+" = "+fibu);
+            birnu=ikinu;
+            ikinu=fibu;
+
+        }
+    }
+}
