@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class mohamm {
+    static int mod(int a, int b) {
+        int result = a % b;
+        System.out.println("mod islemi: "+result+"\n__________________");
+        return result;
+    }
+    static int cvr(int a ,int b){
+       int cevre=2*a +2*b;
+       int alan = a*b;
+        System.out.println("cevre= "+cevre+" \nalan= "+alan+"\n_____________________");
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        Scanner scr = new Scanner(System.in);
+        int select;
+        while (true) {
+            String menu = "1-mod almak\n" + "2-cevre ve alan hesabi\n" + "0-CIKIS YAP";
+            System.out.print("**ISLEMLER MENUSU** \n" + menu+"\nYapmak istediginiz islemi secin:");
+            select = scr.nextByte();
+            if (select == 0) {
+                System.out.println("GULE GULE");
+               break;
+            }
+            else if (select>2) {
+                System.out.println("HATALI GIRIS YAPTINIZ");
+                break;
+            }
+            System.out.println("ilk sayi giriniz");
+            int a = scr.nextInt();
+            System.out.println("ikinci sayi giriniz");
+            int b = scr.nextInt();
+            switch (select) {
+                case 1:
+                    mod(a,b);
+                    break;
+                case 2:
+                    cvr(a , b);
+                    break;
+                default:
+
+            }
+         }
+    }
+}
+
