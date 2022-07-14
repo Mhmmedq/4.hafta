@@ -1,6 +1,7 @@
-import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class mohamm {
+
     static boolean palidrom(int number){
         int temp= number , resrvnum=0 , ss ;
         while (temp!=0){
@@ -8,16 +9,18 @@ public class mohamm {
             resrvnum=(resrvnum*10)+ss;
             temp/=10;
         }
-        if (resrvnum==number)
-            return true;
-        else
-            return false;
+        return  (number==resrvnum);
+
     }
 
 
     public static void main(String[] args) {
-        System.out.println(palidrom(545));
-
+        Scanner scr =new Scanner(System.in);
+        int number = scr.nextInt();
+        if (palidrom(number)){
+            System.out.println(number+". Palindrom Sayıdir");
+        }else {
+            System.out.println(number+". Palindrom Sayı degildir");
+        }
     }
 }
-
