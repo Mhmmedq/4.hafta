@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class mohamm {
+    static void us(int a, int b) {
+        int result=1 ;
+        for (int i=1; i<=b ; i++){
+            result *=a;
+        }
+        System.out.println(result);
+    }
+    public static void main(String[] args) {
+        Scanner scr = new Scanner(System.in);
+        System.out.print("tabanı girin: ");
+        int a= scr.nextInt();
+        System.out.print("usu girin: ");
+        int b= scr.nextInt();
+      us(a,b);
+    }
+}
