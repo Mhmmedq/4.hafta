@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class giris {
+        static int cikartma(int n){
+            while (n>0){
+                System.out.print(n+" ");
+                n=n-5;
+            }
+            return n ;
+        }
+
+        static int top(int a ,int b){
+            while (a<=b){
+                System.out.print(a+" ");
+                a=a+5;
+            }
+            return 1;
+        }
+
+        public static void main(String[] args) {
+            Scanner inp= new Scanner(System.in);
+            int n;
+
+            System.out.print("Sayıyı girin: ");
+            n=inp.nextInt();
+            top(cikartma(n),n);
+        }
+}
